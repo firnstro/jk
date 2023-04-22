@@ -7,7 +7,6 @@ pipeline {
                 sh 'id'
                 sh 'whoami'
                 sh 'echo $HOME'
-                sh 'apt install python3 python3-pip -y'
             }
         }
         stage('Preparando el entorno') {
