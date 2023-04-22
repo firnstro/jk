@@ -5,7 +5,9 @@ pipeline {
         stage('info'){
             steps {
                 sh 'echo $PATH'
-                sh 'which pip'
+                sh 'id'
+                sh 'whoami'
+                sh 'echo $HOME'
             }
         }
         stage('Preparando el entorno') {
