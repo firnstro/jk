@@ -5,8 +5,6 @@ pipeline {
         stage('info'){
             steps {
                 sh 'echo $PATH'
-            }
-            steps {
                 sh 'which pip'
             }
         }
