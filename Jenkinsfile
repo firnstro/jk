@@ -1,8 +1,5 @@
 pipeline {
     agent any;
-     options {
-        runAsUser 'root'
-    }   
     stages {
         stage('info'){
             steps {
