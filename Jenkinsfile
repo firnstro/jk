@@ -1,10 +1,12 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.9'
-        }
-    }
+    agent any;
+        
     stages {
+        stage('info'){
+            steps {
+                sh 'echo $PATH'
+            }
+        }
         stage('Preparando el entorno') {
             steps {
                 sh 'pip install -r requirements.txt'
