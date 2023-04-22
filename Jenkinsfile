@@ -30,7 +30,7 @@ pipeline {
     stage('construcción del artefacto') {
           agent { 
             node{
-              label "DockerServer"; 
+              label "test"; 
               }
           }
           steps {
@@ -40,7 +40,7 @@ pipeline {
       stage('Despliegue') {
           agent { 
             node{
-              label "DockerServer"; 
+              label "test"; 
               }
           }
           steps {
