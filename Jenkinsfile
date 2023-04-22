@@ -34,7 +34,7 @@ pipeline {
               }
           }
           steps {
-              sh 'docker run -tdi -p 5000:5000 richijenkins:latest'
+              sh 'docker run -tdi --name richi -p 5000:5000 richijenkins:latest'
           }
       }
     }
