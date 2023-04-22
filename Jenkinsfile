@@ -1,7 +1,8 @@
 pipeline {
-    agent  any;
-    environment {
-        PATH = "${PATH}:/usr/bin"
+    agent {
+        docker {
+            image 'python:3.9'
+        }
     }
     stages {
         stage('Preparando el entorno') {
