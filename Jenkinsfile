@@ -32,7 +32,7 @@ pipeline {
               }
           }
           steps {
-              sh 'docker build https://github.com/firnstro/jk.git -t richijenkins:latest'
+              sh 'docker build https://github.com/firnstro/jk.git#main -t richijenkins:latest'
           }
       }        
       stage('Despliegue') {
