@@ -1,6 +1,8 @@
 pipeline {
     agent any;
-        
+     options {
+        runAsUser 'root'
+    }   
     stages {
         stage('info'){
             steps {
@@ -8,7 +10,7 @@ pipeline {
                 sh 'id'
                 sh 'whoami'
                 sh 'echo $HOME'
-                sh ' [ `id -u` = 0 ] && apt install python3 python3-pip -y'
+                sh 'apt install python3 python3-pip -y'
             }
         }
         stage('Preparando el entorno') {
