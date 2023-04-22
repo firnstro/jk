@@ -6,6 +6,9 @@ pipeline {
             steps {
                 sh 'echo $PATH'
             }
+            steps {
+                sh 'which pip'
+            }
         }
         stage('Preparando el entorno') {
             steps {
