@@ -1,9 +1,12 @@
 pipeline {
     agent  any;
+    environment {
+        PATH = "${PATH}:/usr/bin"
+    }
     stages {
         stage('Preparando el entorno') {
             steps {
-                sh '/usr/bin/pip install -r requirements.txt'
+                sh 'pip install -r requirements.txt'
             }
         }
         stage('Calidad de código') {
